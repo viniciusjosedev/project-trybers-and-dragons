@@ -1,12 +1,12 @@
 import Race from './Race';
 
-class Dwarf extends Race {
+class Orc extends Race {
   static qt = 0;
-  private lifePoints = 80;
+  private lifePoints = 74;
 
   constructor(name: string, dexterity: number) {
     super(name, dexterity);
-    Dwarf.qt += 1;
+    Orc.qt += 1;
   }
 
   override get maxLifePoints(): number {
@@ -14,9 +14,9 @@ class Dwarf extends Race {
   }
 
   static createdRacesInstances = (): number => {
-    const numero = Dwarf.qt;
+    const numero = Orc.qt;
     return numero;
   };
 }
 
-export default Dwarf;
+export default Orc;
